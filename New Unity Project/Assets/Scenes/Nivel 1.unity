@@ -237,7 +237,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8424349597703957451, guid: 644272fa5fb8b4f4c8cee27ded5b6e99, type: 3}
       propertyPath: m_UseGravity
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8424349597703957451, guid: 644272fa5fb8b4f4c8cee27ded5b6e99, type: 3}
       propertyPath: m_IsKinematic
@@ -485,6 +485,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2729039968150251488, guid: 8fad1b29bf952e34eb8a50298229ef9f, type: 3}
+      propertyPath: VelocidadPaddle
+      value: 28.44
+      objectReference: {fileID: 0}
     - target: {fileID: 4162628636010352085, guid: 8fad1b29bf952e34eb8a50298229ef9f, type: 3}
       propertyPath: m_Name
       value: Jugador
