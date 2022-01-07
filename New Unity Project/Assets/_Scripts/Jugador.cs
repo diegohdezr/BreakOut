@@ -22,16 +22,18 @@ public class Jugador : MonoBehaviour
         //mousePos2D = Input.mousePosition;
         //mousePos2D.z = -Camera.main.transform.position.z;
         //mousePos3D = Camera.main.ScreenToWorldPoint(mousePos2D);
-        
-        
-        if (Input.GetKey(KeyCode.RightArrow)) 
-        {
-            transform.Translate(Vector3.down * VelocidadPaddle * Time.deltaTime);
-        }
-        if (Input.GetKey(KeyCode.LeftArrow)) 
-        {
-            transform.Translate(Vector3.up * VelocidadPaddle * Time.deltaTime);
-        }
+
+
+        //if (Input.GetKey(KeyCode.RightArrow))
+        //{
+        //    transform.Translate(Vector3.down * VelocidadPaddle * Time.deltaTime);
+        //}
+        //if (Input.GetKey(KeyCode.LeftArrow))
+        //{
+        //    transform.Translate(Vector3.up * VelocidadPaddle * Time.deltaTime);
+        //}
+
+        transform.Translate(Input.GetAxis("Horizontal") * Vector3.down * VelocidadPaddle * Time.deltaTime);
 
         Vector3 pos = transform.position;
         //pos.x = mousePos3D.x;
