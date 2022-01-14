@@ -16,6 +16,21 @@ public class Jugador : MonoBehaviour
         transform = this.gameObject.transform;
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Bola")
+        {
+            //calculamos el angulo en el que entro la colision
+            Vector3 direccion = collision.contacts[0].point - transform.position;
+            //una vez calculada la colision se normaliza para dejar su magnitud en 1
+            direccion = direccion.normalized;
+            //obtenemos la velocidad definida en la bola y aplicamos esa magnitud a nuestra direccion
+            collision.rigidbody.velocity = collision.gameObject.GetComponent<Bola>().velocidadBola * direccion;
+            //reducimos la resistencia de nuestro bloque
+
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
